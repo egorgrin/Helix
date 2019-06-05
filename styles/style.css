@@ -32,6 +32,11 @@ h2 {
     font-weight: 600;
 }
 
+.title {
+    text-align: center;
+    margin: 90px 0;
+}
+
 .btn {
     display: inline-block;
     border-radius: 10px;
@@ -233,4 +238,66 @@ h2 {
     font-weight: 400;
     font-size: 20px;
     padding-bottom: 30px;
+}
+
+/* Specialists */
+
+.specialists {
+    background-color: #EFEFEF;
+    padding-bottom: 80px;
+}
+
+.spec_row {
+    margin-bottom: 40px;
+}
+
+.spec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+    padding-bottom: 30px;
+}
+
+.spec p {
+    margin-bottom: 25px;
+    padding: 0 20px;
+}
+
+.spec_name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.spec_btn, .spec_form1_btn, .spec_form2_btn {
+    background-color: #43b659;
+    color: #fff;
+    font-weight: 400;
+}
+
+.spec_btn {
+    padding: 5px 15px;
+    /* border-radius: 0px; */
+}
+
+.spec_bot_text {
+    margin-top: 30px;
+}
+
+.spec_form1_btn, .spec_form2_btn {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 15px 35px;
+    margin: auto 0 15px;
+}
+
+.spec_form2_btn {
+    margin: 0;
 }
