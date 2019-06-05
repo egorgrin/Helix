@@ -157,6 +157,8 @@ h2 {
     padding: 15px 20px;
 }
 
+/* Promo */
+
 .promo {
     height: 100vh;
     background-image: url('../img/promo.jpg');
@@ -185,6 +187,17 @@ h2 {
 
 /* About */
 
+.about {
+    background-color: #fff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.about_add_padding {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
 .about_left {
     background-image: url('../img/about.jpg');
     height: 100%;
@@ -199,9 +212,13 @@ h2 {
     color: #ffffff;
 }
 
+.about_right h2 {
+    margin-bottom: 30px;
+}
+
 .about_right h2+p {
     position: relative;
-    padding-top: 15px;
+    padding-top: 25px;
 }
 
 .about_right h2+p:before {
@@ -209,8 +226,8 @@ h2 {
     content: "";
     top: 0;
     left: 0;
-    width: 50%;
-    height: 1px;
+    width: 50px;
+    height: 3px;
     /* margin: 15px 0; */
     position: absolute;
     background-color: #fff;
