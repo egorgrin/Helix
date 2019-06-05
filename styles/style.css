@@ -1,0 +1,224 @@
+body {
+    font-family: 'Helix';
+    font-weight: 300;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+span {
+    color: #43b659;
+}
+
+h2 {
+    font-size: 52px;
+    font-weight: 600;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Typography */
+
+@font-face {
+    font-family: 'helix';
+    src: url('../fonts/MyriadPro-Light.woff') format('woff');
+    src: url('../fonts/MyriadPro-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: light
+}
+
+@font-face {
+    font-family: 'helix';
+    src: url('../fonts/MyriadPro-Regular.woff') format('woff');
+    src: url('../fonts/MyriadPro-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'helix';
+    src: url('../fonts/MyriadPro-Cond.woff') format('woff');
+    src: url('../fonts/MyriadPro-Cond.woff2') format('woff2');
+    font-weight: 500;
+    font-style: medium
+}
+
+@font-face {
+    font-family: 'helix';
+    src: url('../fonts/MyriadPro-BoldCond.woff') format('woff');
+    src: url('../fonts/MyriadPro-BoldCond.woff2') format('woff2');
+    font-weight: 600;
+    font-style: semi-bold
+}
+
+@font-face {
+    font-family: 'helix';
+    src: url('../fonts/MyriadPro-Bold.woff') format('woff');
+    src: url('../fonts/MyriadPro-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: bold
+}
+
+/* Header */
+
+.header {
+    background-color: #43b659;
+}
+
+.header_top_row {
+    text-align: center;
+}
+
+.header_top_flex {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.logo {
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+}
+
+.header_top_text {
+    color: #ffffff;
+    font-size: 13px;
+    /* font-family: 'Helix'; */
+    font-weight: 400;
+    line-height: 1.55;
+    padding: 10px 0;
+}
+
+.header_top_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical {
+    content: "";
+    width: 1px;
+    height: 100%;
+    border-bottom: 15px solid #43b659;
+    background-color: #fff;
+}
+
+.header_top_phone {
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.header_top_button {
+    background-color: #fff;
+    color: #43b659;
+    font-weight: 600;
+    padding: 14px 12px;
+    font-family: arial;
+}
+
+.header_bot_row {
+    display: flex;
+    justify-content: center;
+}
+
+.header_bot_row a {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+.promo {
+    height: 100vh;
+    background-image: url('../img/promo.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.promo_text {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 75px;
+    line-height: 1.23;
+}
+
+.promo_button {
+    color: #ffffff;
+    background-color: #43b659;
+    padding: 21px 65px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 60px;
+}
+
+/* About */
+
+.about_left {
+    background-image: url('../img/about.jpg');
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about_right {
+    padding: 60px 70px 0 50px;
+    background-color: #43b659;
+    color: #ffffff;
+}
+
+.about_right h2+p {
+    position: relative;
+    padding-top: 15px;
+}
+
+.about_right h2+p:before {
+    display: inline-block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 1px;
+    /* margin: 15px 0; */
+    position: absolute;
+    background-color: #fff;
+}
+
+.about_right p {
+    line-height: 28px;
+    font-weight: 400;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
