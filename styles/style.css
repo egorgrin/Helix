@@ -43,6 +43,10 @@ h2 {
     cursor: pointer;
 }
 
+.margin_right_0 {
+    margin-right: 0;
+}
+
 /* Typography */
 
 @font-face {
@@ -300,4 +304,45 @@ h2 {
 
 .spec_form2_btn {
     margin: 0;
+}
+
+/* Promo 1 */
+
+.promo_1 {
+    height: 100vh;
+    background-image: url('../img/promo.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.promo_1 .row {
+    justify-content: flex-end;
+}
+
+.promo_1 .promo_content {
+    /* text-align: right; */
+}
+
+.promo_content ul {
+    /* text-align: left; */
+    font-size: 35px;
+}
+
+.promo_1_text {
+    color: #000;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 1.23;
+}
+
+.promo_1_button {
+    color: #ffffff;
+    background-color: #43b659;
+    padding: 21px 65px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 60px;
 }
