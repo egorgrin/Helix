@@ -28,7 +28,7 @@ span {
 }
 
 h2 {
-    font-size: 52px;
+    font-size: 53px;
     font-weight: 600;
 }
 
@@ -169,13 +169,13 @@ h2 {
 /* Promo */
 
 .promo {
-    height: 100vh;
     background-image: url('../img/promo.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
+    padding: 80px 0;
 }
 
 .promo_text {
@@ -309,13 +309,13 @@ h2 {
 /* Promo 1 */
 
 .promo_1 {
-    height: 100vh;
     background-image: url('../img/promo1.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
+    padding: 80px 0;
 }
 
 .promo_1 .row {
@@ -350,4 +350,36 @@ h2 {
     font-size: 14px;
     margin-top: 40px;
     border-radius: 30px;
+}
+
+/* adv */
+
+.adv {
+    color: #fff;
+    background-color: #EFEFEF;
+    font-weight: 300;
+}
+
+.adv_title {
+    color: #000;
+}
+
+.adv_left_item, .adv_right_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.adv_left_item img, .adv_right_item img {
+    width: 50px;
+    height: 50px;
+}
+
+.adv_row p {
+    color: #000;
+    /* line-height: 28px; */
+    line-height: 28px;
+    font-weight: 600;
+    font-size: 22px;
+    margin-left: 15px;
 }
