@@ -154,16 +154,19 @@ h2 {
     font-family: arial;
 }
 
-.header_bot_row {
+.header_top_button:hover {}
+
+.header_nav {
     display: flex;
     justify-content: center;
+    padding: 20px 0px;
 }
 
 .header_bot_row a {
     font-size: 20px;
     color: #ffffff;
     font-weight: 600;
-    padding: 15px 20px;
+    padding-right: 20px;
 }
 
 /* Promo */
@@ -515,11 +518,12 @@ h2 {
 }
 
 .footer_nav {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .footer_nav a {
     color: #ffffff;
     text-transform: uppercase;
-    padding: 15px 20px;
+    padding-right: 20px;
 }
