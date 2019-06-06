@@ -322,10 +322,6 @@ h2 {
     justify-content: flex-end;
 }
 
-.promo_1 .promo_content {
-    /* text-align: right; */
-}
-
 .promo_1_text {
     color: #000;
     font-weight: 600;
@@ -386,6 +382,10 @@ h2 {
 
 /* Feedback */
 
+.fbs {
+    padding: 0 0 80px 0;
+}
+
 .fbs img {
     width: 150px;
     height: 150px;
@@ -434,13 +434,72 @@ h2 {
     padding: 17px 55px;
 }
 
-/* .spec_form1_btn, .spec_form2_btn {
-    font-size: 14px;
-    font-weight: 700;
-    padding: 15px 35px;
-    margin: auto 0 15px;
+/* Promo_2 */
+
+.promo_2 {
+    background-image: url('../img/promo1.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
 }
 
-.spec_form2_btn {
-    margin: 0;
-} */
+.promo_2 .row {
+    justify-content: flex-end;
+}
+
+.promo_2_text {
+    color: #000;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 1.23;
+    margin-bottom: 40px;
+}
+
+.promo_2_button {
+    color: #ffffff;
+    background-color: #000;
+    padding: 17px 45px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 200px;
+    border: none;
+}
+
+.form-new {
+    display: flex;
+    flex-direction: column;
+}
+
+.promo_2_form input {
+    display: block;
+}
+
+.promo_2_form input {
+    font-size: 14px;
+    width: 70%;
+    border: 1px solid #000;
+    /* background-color: #4d4d4d; */
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 20px;
+    display: inline-block;
+    color: #fff;
+    outline: 0;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.promo_2_form textarea {
+    font-size: 14px;
+    width: 70%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 18px;
+    font-size: 17px;
+    font-weight: 400;
+}
