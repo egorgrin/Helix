@@ -383,3 +383,64 @@ h2 {
     font-size: 22px;
     margin-left: 15px;
 }
+
+/* Feedback */
+
+.fbs img {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin-bottom: 35px;
+}
+
+.fbs_title {
+    color: #000;
+}
+
+.fb {
+    text-align: center;
+}
+
+.fb_text {
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.fb_name {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 120px;
+}
+
+.bf_btns {
+    text-align: center;
+}
+
+.fb_btn_1, .fb_btn_2 {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.fb_btn_1 {
+    background-color: #43b659;
+    color: #fff;
+    padding: 20px 55px;
+    margin-right: 25px;
+}
+
+.fb_btn_2 {
+    border: 3px solid #000;
+    padding: 17px 55px;
+}
+
+/* .spec_form1_btn, .spec_form2_btn {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 15px 35px;
+    margin: auto 0 15px;
+}
+
+.spec_form2_btn {
+    margin: 0;
+} */
