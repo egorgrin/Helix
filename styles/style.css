@@ -310,7 +310,7 @@ h2 {
 
 .promo_1 {
     height: 100vh;
-    background-image: url('../img/promo.jpg');
+    background-image: url('../img/promo1.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -326,11 +326,6 @@ h2 {
     /* text-align: right; */
 }
 
-.promo_content ul {
-    /* text-align: left; */
-    font-size: 35px;
-}
-
 .promo_1_text {
     color: #000;
     font-weight: 600;
@@ -338,11 +333,21 @@ h2 {
     line-height: 1.23;
 }
 
+.promo_content ul {
+    /* text-align: left; */
+    font-size: 35px;
+    margin-top: 30px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
 .promo_1_button {
     color: #ffffff;
     background-color: #43b659;
-    padding: 21px 65px;
-    font-weight: 700;
-    font-size: 16px;
-    margin-top: 60px;
+    padding: 21px 45px;
+    font-weight: 600;
+    font-family: Arial;
+    font-size: 14px;
+    margin-top: 40px;
+    border-radius: 30px;
 }
