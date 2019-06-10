@@ -564,11 +564,12 @@ h2 {
     flex-direction: column;
 }
 
-.promo_2_form input {
-    display: block;
+.promo_2_form input, .promo_2_form textarea {
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .promo_2_form input {
+    display: block;
     font-size: 14px;
     width: 70%;
     border: 1px solid #000;
@@ -577,7 +578,7 @@ h2 {
     padding: 18px;
     margin-bottom: 20px;
     display: inline-block;
-    color: #fff;
+    color: #000;
     outline: 0;
     font-size: 17px;
     font-weight: 400;
@@ -591,6 +592,10 @@ h2 {
     padding: 18px;
     font-size: 17px;
     font-weight: 400;
+}
+
+.promo_2_form input:focus, .promo_2_form textarea:focus {
+    border: 1px solid #43b659;
 }
 
 /* Footer */
@@ -624,4 +629,38 @@ h2 {
 
 .goup_btn {
     text-align: right;
+}
+
+@media only screen and (max-width: 991px) {
+    .logo {
+        padding: 15px 0;
+    }
+    .logo img {
+        height: 60px;
+    }
+    .promo_text {
+        font-size: 65px;
+    }
+    .promo_1_text {
+        font-size: 45px;
+    }
+    .promo_content ul {
+        font-size: 30px;
+    }
+    .about_left {
+        display: none;
+    }
+    .fb_btn_1 {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .promo_2_form input {
+        width: 100%;
+    }
+    .promo_2_form textarea {
+        width: 100%;
+    }
+    .footer {
+        font-size: 15px;
+    }
 }
