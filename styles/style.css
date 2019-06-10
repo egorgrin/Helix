@@ -58,7 +58,6 @@ h2 {
     src: url('../fonts/MyriadPro-Light.woff') format('woff');
     src: url('../fonts/MyriadPro-Light.woff2') format('woff2');
     font-weight: 300;
-    font-style: light
 }
 
 @font-face {
@@ -66,7 +65,6 @@ h2 {
     src: url('../fonts/MyriadPro-Regular.woff') format('woff');
     src: url('../fonts/MyriadPro-Regular.woff2') format('woff2');
     font-weight: 400;
-    font-style: normal
 }
 
 @font-face {
@@ -74,7 +72,6 @@ h2 {
     src: url('../fonts/MyriadPro-Cond.woff') format('woff');
     src: url('../fonts/MyriadPro-Cond.woff2') format('woff2');
     font-weight: 500;
-    font-style: medium
 }
 
 @font-face {
@@ -82,7 +79,6 @@ h2 {
     src: url('../fonts/MyriadPro-BoldCond.woff') format('woff');
     src: url('../fonts/MyriadPro-BoldCond.woff2') format('woff2');
     font-weight: 600;
-    font-style: semi-bold
 }
 
 @font-face {
@@ -90,7 +86,6 @@ h2 {
     src: url('../fonts/MyriadPro-Bold.woff') format('woff');
     src: url('../fonts/MyriadPro-Bold.woff2') format('woff2');
     font-weight: 700;
-    font-style: bold
 }
 
 /* Header */
@@ -700,7 +695,7 @@ h2 {
     }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 575px) {
     h2 {
         font-size: 35px;
     }
