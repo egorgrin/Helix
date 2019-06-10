@@ -664,3 +664,40 @@ h2 {
         font-size: 15px;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .header_top_text {
+        display: none;
+    }
+    .vertical {
+        display: none;
+    }
+    .header_top_right {
+        padding: 40px 0;
+    }
+    .promo_text {
+        font-size: 47px;
+    }
+    .promo_1 .promo_content {
+        text-align: center;
+    }
+    .promo_content ul {
+        font-size: 35px;
+    }
+    .promo_2_form input, .promo_2_form textarea {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    .copyright_col {
+        text-align: center;
+        margin: 40px 0;
+    }
+    .footer_nav_col {
+        order: -1;
+    }
+    .goup_btn {
+        text-align: center;
+    }
+    .footer {
+        font-size: 20px;
+    }
+}
