@@ -233,8 +233,6 @@ h2 {
 
 .about {
     background-color: #fff;
-    padding-top: 80px;
-    padding-bottom: 80px;
 }
 
 .about_left {
@@ -699,5 +697,80 @@ h2 {
     }
     .footer {
         font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    h2 {
+        font-size: 35px;
+    }
+    .padding {
+        padding: 40px 0;
+    }
+    .title {
+        margin-bottom: 40px;
+    }
+    .header_nav {
+        display: none;
+    }
+    .promo {
+        background-position: top left;
+        padding: 40px 0;
+        text-align: center;
+    }
+    .promo_text {
+        font-size: 38px;
+    }
+    .promo_button {
+        padding: 10px 54px;
+        font-weight: 700;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+    .about {
+        background-color: #43b659;
+        text-align: center;
+    }
+    .about_right {
+        padding: 0px 20px 0 20px;
+    }
+    .about_right p {
+        font-size: 17px;
+    }
+    .about_right h2+p:before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .promo_1 {
+        padding: 40px 0;
+    }
+    .promo_1 .promo_content {
+        text-align: left;
+    }
+    .promo_1_text {
+        font-size: 37px;
+    }
+    .promo_content ul {
+        font-size: 34px;
+    }
+    .promo_1_button {
+        width: 100%;
+        padding: 20px 14px;
+    }
+    .adv_left_item, .adv_right_item {
+        margin-bottom: 60px;
+    }
+    .adv_row p {
+        font-size: 20px;
+    }
+    .footer {
+        font-size: 25px;
+    }
+    .footer_nav {
+        display: block;
+        text-align: center;
+    }
+    .footer_nav li {
+        margin-bottom: 15px;
     }
 }
