@@ -50,8 +50,8 @@
                     <div class="logo_2 hidden">
                         <a href="#"><img src="img/logo.png" alt="Хеликс"></a>
                     </div>
-                    <div class="hamburger">
-                        <button class="hamburger" type="button">
+                    <div class="hamburger_block">
+                        <button class="hamburger hamburger--spin-r" type="button">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
                             </span>
@@ -62,7 +62,7 @@
         </div>
         <div class="nav nav_fixed">
             <div class="container-fluid">
-                <div class="header_bot_row">
+                <div class="header_bot_row my-menu">
                     <ul class="header_nav">
                         <li><a href=" #">о нас</a></li>
                         <li><a href="#">наши специалисты</a></li>
@@ -289,6 +289,28 @@
         </div>
     </div>
     <script>
+        // mmenu
+        $(document).ready(
+            function () {
+                var $menu = $('.my-menu').clone().removeAttr("class").find('ul').removeAttr("class").parent().mmenu({
+                    "extensions": [
+                        "position-right",
+                        "pagedim-black"
+                    ],
+                    "navbar":
+                        { title: "Меню" }
+                });
+                var api = $menu.data("mmenu");
+
+
+                $(".hamburger").click(
+                    function (evnt) {
+                        evnt.preventDefault();
+                        api.open();
+                    }
+                );
+            }
+        );
         // fixed header
         $(window).on('load resize scroll', function () {
             // вычисление точки срабатывания скрипта путем вычисления высоты верхнего блока

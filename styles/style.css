@@ -151,7 +151,7 @@ h2 {
     background-color: #fff;
 }
 
-.logo_2, .hamburger {
+.logo_2, .hamburger_block {
     display: none;
 }
 
@@ -696,7 +696,7 @@ h2 {
     .header_top_flex {
         justify-content: space-between;
     }
-    .logo_2, .hamburger {
+    .logo_2, .hamburger_block {
         display: flex;
         align-items: center;
     }
