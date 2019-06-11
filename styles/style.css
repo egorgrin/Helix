@@ -477,7 +477,6 @@ h2 {
 .fb_name {
     font-weight: 700;
     font-size: 16px;
-    margin-bottom: 120px;
 }
 
 .bf_btns {
@@ -520,6 +519,106 @@ h2 {
     background-color: rgba(67, 182, 89, 0.9);
     color: #fff;
     border-color: #43b659;
+}
+
+.sl-nav {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    height: 4px;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+.slick-arrow {
+    font-size: 0;
+    background: transparent;
+    border: none;
+    position: absolute;
+    padding: 0;
+}
+
+.slick-arrow.slick-prev {
+    top: 50%;
+    left: -20px;
+}
+
+.slick-arrow.slick-next {
+    top: 50%;
+    right: -20px;
+}
+
+.slick-arrow.slick-prev:before, .slick-arrow.slick-next:before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 41px;
+    background: url(../img/icons/sl-arrow.png) no-repeat center center;
+}
+
+.slick-arrow.slick-prev:before {
+    transform: rotate(180deg);
+}
+
+.sl-wrap {
+    padding: 15px 25px;
+    text-align: center;
+}
+
+.sl-wrap .img-wrap {
+    background: #fff;
+    display: inline-block;
+    padding: 22px;
+    border-radius: 50%;
+    border: 2px solid #3d3d3d;
+    margin-bottom: 12px;
+}
+
+.sl-wrap .sl-review {
+    color: #242424;
+}
+
+.sl-wrap .title {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.sl-wrap .name {
+    text-align: right;
+    margin-top: 12px;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 6px;
+    vertical-align: middle;
+}
+
+.slick-dots button {
+    font-size: 0;
+    border: 1px solid #6a6a6a;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: transparent;
+    transition: .1s;
+    line-height: normal;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.slick-active button {
+    width: 10px;
+    height: 10px;
+    border: none;
+    box-shadow: 0 0 0 7px #fff, 0 0 0 8px #43b659;
+    background: #43b659;
+    margin: 4px;
+    padding: 0;
+}
+
+.slick-dots li:not(.slick-active) button:hover {
+    background: #6a6a6a;
 }
 
 /* Promo_2 */
@@ -673,6 +772,9 @@ h2 {
     .fb_btn_1 {
         margin-bottom: 20px;
     }
+    .promo {
+        background-position: top left;
+    }
     .promo_2_form input {
         width: 100%;
     }
@@ -763,7 +865,6 @@ h2 {
         display: none;
     }
     .promo {
-        background-position: top left;
         padding: 40px 0;
         text-align: center;
     }
@@ -803,7 +904,6 @@ h2 {
         font-size: 34px;
     }
     .promo_1_button {
-        width: 100%;
         padding: 20px 14px;
     }
     .preim_left_item, .preim_right_item {
@@ -812,8 +912,15 @@ h2 {
     .preim_row p {
         font-size: 20px;
     }
-    .preim_right_item:last-of-type {
+    .preim_right_item:last-of-type, .spec_marg:last-of-type {
         margin-bottom: 0;
+    }
+    .fb_btn_2 {
+        padding: 17px 48px;
+    }
+    .fb_btn_1, .fb_btn_2 {
+        margin-right: 0;
+        margin-left: 0;
     }
     .footer {
         font-size: 25px;

@@ -8,11 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/grid.css">
+    <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="styles/jquery.mmenu.all.css">
     <link rel="stylesheet" href="styles/hamburgers.css">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="js/jquery.mmenu.all.js"></script>
 </head>
 
 <body>
@@ -236,21 +235,52 @@
                 <div class="fbs_title title col-12">
                     <h2>ОТЗЫВЫ<br><span>О HELIX-ОРЕНБУРГ</span></h2>
                 </div>
+            </div>
+            <div class="slider">
                 <div class="fb col-12">
                     <p class="fb_text">Проходила осмотр в поликлинике и потом врач направила сделать анализы.
                         Посоветовала сходить
-                        именно в Хеликс. Сказала мол у них хорошие специалисты и результатам можно доверять. Понравилось
-                        что приняли меня одним днем без всяких очередей, а результаты пришли мне сразу на почту через
+                        именно в Хеликс. Сказала мол у них хорошие специалисты и результатам можно доверять.
+                        Понравилось
+                        что приняли меня одним днем без всяких очередей, а результаты пришли мне сразу на почту
+                        через
                         трое суток, не пришлось за ними ездить. Удобно!</p>
                     <img src="img/icons/person.png" alt="">
                     <p class="fb_name">
                         Elena Bizina
                     </p>
                 </div>
-                <div class="bf_btns col-12">
-                    <a href="#" class="fb_btn_1 btn">Выбор врача и запись онлайн</a><a href="#"
-                        class="fb_btn_2 btn">Оставить отзыв</a>
+                <div class="fb col-12">
+                    <p class="fb_text">Проходила осмотр в поликлинике и потом врач направила сделать анализы.
+                        Посоветовала сходить
+                        именно в Хеликс. Сказала мол у них хорошие специалисты и результатам можно доверять.
+                        Понравилось
+                        что приняли меня одним днем без всяких очередей, а результаты пришли мне сразу на почту
+                        через
+                        трое суток, не пришлось за ними ездить. Удобно!</p>
+                    <img src="img/icons/person.png" alt="">
+                    <p class="fb_name">
+                        Elena Bizina
+                    </p>
                 </div>
+                <div class="fb col-12">
+                    <p class="fb_text">Проходила осмотр в поликлинике и потом врач направила сделать анализы.
+                        Посоветовала сходить
+                        именно в Хеликс. Сказала мол у них хорошие специалисты и результатам можно доверять.
+                        Понравилось
+                        что приняли меня одним днем без всяких очередей, а результаты пришли мне сразу на почту
+                        через
+                        трое суток, не пришлось за ними ездить. Удобно!</p>
+                    <img src="img/icons/person.png" alt="">
+                    <p class="fb_name">
+                        Elena Bizina
+                    </p>
+                </div>
+            </div>
+            <div class="sl-nav"></div>
+            <div class="bf_btns col-12">
+                <a href="#" class="fb_btn_1 btn">Выбор врача и запись онлайн</a><a href="#"
+                    class="fb_btn_2 btn">Оставить отзыв</a>
             </div>
         </div>
     </div>
@@ -278,10 +308,10 @@
                 <div class="copyright_col col-12 col-md-3">© 2019 Хеликс-Тюмень</div>
                 <div class="footer_nav_col col-12 col-md-7">
                     <ul class="footer_nav">
-                        <li><a href=" #">о нас</a></li>
-                        <li><a href="#">наши специалисты</a></li>
-                        <li><a href="#">преимущества</a></li>
-                        <li><a href="#">онлайн запись</a></li>
+                        <li><a class="scrollto" href="#about">о нас</a></li>
+                        <li><a class="scrollto" href="#specialists">наши специалисты</a></li>
+                        <li><a class="scrollto" href="#preim">преимущества</a></li>
+                        <li><a class="scrollto" href="#promo_2">онлайн запись</a></li>
                     </ul>
                 </div>
                 <div class="goup_btn col-12 col-md-2"><a class="topLink" href="#top">НАВЕРХ</a></li>
@@ -289,7 +319,11 @@
             </div>
         </div>
     </div>
-    <script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="js/jquery.mmenu.all.js"></script>
+    <script type="text/javascript">
         // mmenu
         $(document).ready(
             function () {
@@ -302,7 +336,6 @@
                         { title: "Меню" }
                 });
                 var api = $menu.data("mmenu");
-
 
                 $(".hamburger").click(
                     function (evnt) {
@@ -359,7 +392,19 @@
                 return false;
             });
         });
+        // Slick
+        $(document).ready(function () {
+            $('.slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: false,
+                appendDots: '.sl-nav'
+            });
+        });
     </script>
+
 </body>
 
 </html>
