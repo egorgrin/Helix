@@ -123,7 +123,7 @@ h2 {
     align-items: center;
 }
 
-.logo img {
+.logo img, .logo_2 img {
     height: 80px;
 }
 
@@ -149,6 +149,10 @@ h2 {
     height: 100%;
     border-bottom: 15px solid #43b659;
     background-color: #fff;
+}
+
+.logo_2, .hamburger {
+    display: none;
 }
 
 .header_top_phone {
@@ -686,6 +690,16 @@ h2 {
     .title {
         margin-bottom: 60px;
     }
+    .logo, .header_nav {
+        display: none;
+    }
+    .header_top_flex {
+        justify-content: space-between;
+    }
+    .logo_2, .hamburger {
+        display: flex;
+        align-items: center;
+    }
     .header_top_text {
         display: none;
     }
@@ -734,6 +748,15 @@ h2 {
     }
     .title {
         margin-bottom: 40px;
+    }
+    .logo {
+        display: flex;
+    }
+    .logo_2 {
+        display: none;
+    }
+    .header_top_flex {
+        justify-content: space-around;
     }
     .header_nav {
         display: none;
