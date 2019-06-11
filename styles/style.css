@@ -641,6 +641,10 @@ h2 {
     text-align: right;
 }
 
+.goup_btn a {
+    color: #fff;
+}
+
 @media only screen and (max-width: 991px) {
     .padding {
         padding: 60px 0;
@@ -754,9 +758,6 @@ h2 {
     }
     .logo_2 {
         display: none;
-    }
-    .header_top_flex {
-        justify-content: space-around;
     }
     .header_nav {
         display: none;

@@ -18,7 +18,7 @@
 <body>
     <div class="header">
         <div class="container-fluid">
-            <div class="header_top_row row">
+            <div id="top" class="header_top_row row">
                 <div class="logo col-sm-12 col-md-4">
                     <a href="#"><img src="img/logo.png" alt="Хеликс"></a>
                 </div>
@@ -64,10 +64,10 @@
             <div class="container-fluid">
                 <div class="header_bot_row my-menu">
                     <ul class="header_nav">
-                        <li><a href=" #">о нас</a></li>
-                        <li><a href="#">наши специалисты</a></li>
-                        <li><a href="#">преимущества</a></li>
-                        <li><a href="#">онлайн запись</a></li>
+                        <li><a class="scrollto" href="#about">о нас</a></li>
+                        <li><a class="scrollto" href="#specialists">наши специалисты</a></li>
+                        <li><a class="scrollto" href="#preim">преимущества</a></li>
+                        <li><a class="scrollto" href="#promo_2">онлайн запись</a></li>
                     </ul>
                 </div>
             </div>
@@ -84,7 +84,7 @@
             </div>
         </div>
     </div>
-    <div class="about padding">
+    <div id="about" class="about padding">
         <div class="container">
             <div class="row">
                 <div class="col-6">
@@ -112,7 +112,7 @@
             </div>
         </div>
     </div>
-    <div class="specialists padding">
+    <div id="specialists" class="specialists padding">
         <div class="container">
             <div class="spec_row row">
                 <div class="specialists_title title col-12">
@@ -193,7 +193,7 @@
             </div>
         </div>
     </div>
-    <div class="preim padding">
+    <div id="preim" class="preim padding">
         <div class="container">
             <div class="preim_row row">
                 <div class="preim_title title col-12">
@@ -230,7 +230,7 @@
             </div>
         </div>
     </div>
-    <div class="fbs padding">
+    <div id="" class="fbs padding">
         <div class="container">
             <div class="row">
                 <div class="fbs_title title col-12">
@@ -254,7 +254,7 @@
             </div>
         </div>
     </div>
-    <div class="promo_2">
+    <div id="promo_2" class="promo_2">
         <div class="container-fluid">
             <div class="row">
                 <div class="promo_content col-12 col-md-5 col-xl-5">
@@ -272,7 +272,7 @@
             </div>
         </div>
     </div>
-    <div class="footer">
+    <div id="" class="footer">
         <div class="container-fluid">
             <div class="row">
                 <div class="copyright_col col-12 col-md-3">© 2019 Хеликс-Тюмень</div>
@@ -284,7 +284,8 @@
                         <li><a href="#">онлайн запись</a></li>
                     </ul>
                 </div>
-                <div class="goup_btn col-12 col-md-2">НАВЕРХ</div>
+                <div class="goup_btn col-12 col-md-2"><a class="topLink" href="#top">НАВЕРХ</a></li>
+                </div>
             </div>
         </div>
     </div>
@@ -334,6 +335,29 @@
                 fixed.removeClass('fixed');
                 margin_div.css('margin-top', 0);
             }
+        });
+        // scrolltop
+        $(document).ready(function () {
+            $("a.topLink").click(function () {
+                $("html, body").animate({
+                    scrollTop: $($(this).attr("href")).offset().top + "px"
+                }, {
+                        duration: 800,
+                        // easing: "swing"
+                    });
+                return false;
+            });
+        });
+        // scrollTo
+        $(document).ready(function () {
+            $("a.scrollto").click(function () {
+                var elementClick = $(this).attr("href")
+                var destination = $(elementClick).offset().top;
+                jQuery("html:not(:animated),body:not(:animated)").animate({
+                    scrollTop: destination
+                }, 800);
+                return false;
+            });
         });
     </script>
 </body>
