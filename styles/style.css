@@ -985,6 +985,10 @@ input, button {
     margin-right: 10px;
 }
 
+.image_block img {
+    max-height: 90px;
+}
+
 /* DC PAGE form */
 
 /* 
@@ -1055,6 +1059,63 @@ input, button {
     background-color: #111111;
     color: #fff;
     border-color: #43b659;
+}
+
+/* DOC PAGE */
+
+h3 {
+    font-size: 27px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+h3:first-of-type {
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+.doc {
+    padding: 60px 0;
+}
+
+.doc_left {
+    text-align: center;
+}
+
+.doc_name {
+    padding: 10px 5px;
+    font-size: 19px;
+    border: 1px solid #b9b9b9;
+}
+
+.doc_title {
+    padding: 10px 5px;
+    font-size: 16px;
+    border: 1px solid #b9b9b9;
+    border-top: none;
+}
+
+.doc_btn {
+    background: #1a8008;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+    font-weight: 400;
+}
+
+.doc_right {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #b9b9b9;
+}
+
+.doc li {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
 @media only screen and (max-width: 1199px) {
