@@ -48,7 +48,7 @@ img {
 a {
     text-decoration: none;
     color: #000;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 ol, ul {
@@ -173,7 +173,7 @@ input, button {
     background-color: #fff;
 }
 
-.logo_2, .hamburger_block {
+.logo_2, .hamburger_block, .hamburger_block_fixed {
     display: none;
 }
 
@@ -210,6 +210,10 @@ input, button {
     border-color: #fff;
 }
 
+.header_bot_row {
+    padding: 20px 0px;
+}
+
 .header_nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -217,7 +221,25 @@ input, button {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 20px 0px;
+}
+
+.nav_fixed.fixed {
+    display: block;
+}
+
+.fixed_phone {
+    text-align: center;
+    display: none;
+}
+
+.fixed .fixed_phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fixed .header_bot_row {
+    display: block;
 }
 
 .header_bot_row a {
@@ -1062,6 +1084,9 @@ input, button {
     .logo img {
         height: 60px;
     }
+    .nav_fixed {
+        display: none;
+    }
     .promo_text {
         font-size: 65px;
     }
@@ -1097,10 +1122,6 @@ input, button {
         left: 50%;
         transform: translateX(-50%);
     }
-    .dc_left {
-        order: 1;
-        margin-top: 40px;
-    }
     .form_zapis_btn {
         width: 80%;
         font-size: 18px;
@@ -1114,7 +1135,7 @@ input, button {
     .title {
         margin-bottom: 60px;
     }
-    .logo, .header_nav {
+    .logo, .header_nav, .header_nav_col {
         display: none;
     }
     .header_top_flex {
@@ -1132,6 +1153,9 @@ input, button {
     }
     .header_top_text {
         display: none;
+    }
+    .fixed .hamburger_block_fixed {
+        display: block;
     }
     .vertical {
         display: none;
@@ -1169,6 +1193,11 @@ input, button {
     .footer {
         font-size: 20px;
     }
+    /*  */
+    .dc_left {
+        order: 1;
+        margin-top: 40px;
+    }
 }
 
 @media only screen and (max-width: 575px) {
@@ -1191,6 +1220,9 @@ input, button {
     }
     .header_nav {
         display: none;
+    }
+    .hamburger {
+        padding: 15px 0px;
     }
     .promo {
         padding: 40px 0;

@@ -59,15 +59,29 @@
                 </div>
             </div>
         </div>
-        <div class="nav nav_fixed">
+        <div class="nav nav_fixed Fixed">
             <div class="container-fluid">
                 <div class="header_bot_row my-menu">
-                    <ul class="header_nav">
-                        <li><a class="scrollto" href="#about">о нас</a></li>
-                        <li><a class="scrollto" href="#specialists">наши специалисты</a></li>
-                        <li><a class="scrollto" href="#preim">преимущества</a></li>
-                        <li><a class="scrollto" href="#promo_2">онлайн запись</a></li>
-                    </ul>
+                    <div class="row">
+                        <div class="header_nav_col col">
+                            <ul class="header_nav">
+                                <li><a class="scrollto" href="#about">о нас</a></li>
+                                <li><a class="scrollto" href="#specialists">наши специалисты</a></li>
+                                <li><a class="scrollto" href="#preim">преимущества</a></li>
+                                <li><a class="scrollto" href="#promo_2">онлайн запись</a></li>
+                            </ul>
+                        </div>
+                        <div class="fixed_phone col-9 col-md-4">
+                            <a href="tel:89322010205" class="">Телефон: 43-05-19</a>
+                        </div>
+                        <div class="hamburger_block_fixed col-3">
+                            <button class="hamburger hamburger--spin-r" type="button">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -336,12 +350,13 @@
                 });
                 var api = $menu.data("mmenu");
 
-                $(".hamburger").click(
-                    function (evnt) {
-                        evnt.preventDefault();
+                $('.hamburger').click(function (e) {
+                    e.preventDefault();
+                    if ($('html').hasClass('mm-wrapper_opened'))
+                        api.close();
+                    else
                         api.open();
-                    }
-                );
+                });
             }
         );
         // fixed header
@@ -351,8 +366,10 @@
             // определяем блок к которому прибавляется margin
             var margin_div = $('.fixed_margin');
             // вычисление высоты фиксированного блока
-            var margin_top = $('.nav_fixed').outerHeight();
-            // console.log(margin_top);
+            var margin_top = 0;
+            if ($('.nav_fixed').css("display") != "none")
+                margin_top = $('.nav_fixed').outerHeight();
+            console.log(margin_top);
             var fixed = $('.nav_fixed'),
                 scroll = $(window).scrollTop();
 
