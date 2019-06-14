@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="styles/jquery.mmenu.all.css">
     <link rel="stylesheet" href="styles/hamburgers.css">
+    <link rel="stylesheet" href="styles/magnific-popup.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -33,9 +34,10 @@
                     src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abe9694b9c32be0bc907fc2d4fd835b6e0e11b1daf992628d1fcc5d117fe93300&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
             </div>
             <div class="dc_right col-12 col-md-6">
-                <div class="image_block">
-                    <img src="img/1.jpg" alt="">
-                    <img src="img/2.jpg" alt="">
+                <div class="image_block popup-gallery">
+                    <a class="img_popup" href="img/1p.jpg"><img src="img/1o.jpg" alt=""></a>
+                    <a class="img_popup" href="img/2p.jpg"><img src="img/2o.jpg" alt=""></a>
+                    <a class="img_popup" href="img/3p.jpg"><img src="img/2o.jpg" alt=""></a>
                 </div>
                 <div class="info_block">
                     <h4>Адрес Центра</h4>
@@ -74,6 +76,24 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="footer">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script src="js/jquery.mmenu.all.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script>
+            $('.popup-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Загрузка изображения #%curr%...',
+                gallery: {
+                    enabled: true,
+                }
+            });
+
+        </script>
     </div>
 </body>
 
