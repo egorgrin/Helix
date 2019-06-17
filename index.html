@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <div class="nav nav_fixed Fixed">
+        <div class="nav nav_fixed">
             <div class="container-fluid">
                 <div class="header_bot_row my-menu">
                     <div class="row">
@@ -357,6 +357,11 @@
                     else
                         api.open();
                 });
+
+                $('.mm-listitem__text').click(function () {
+                    api.close();
+                });
+
             }
         );
         // fixed header
@@ -368,13 +373,13 @@
             // вычисление высоты фиксированного блока
             var margin_top = 0;
             if ($('.nav_fixed').css("display") != "none")
-                margin_top = $('.nav_fixed').outerHeight();
-            console.log(margin_top);
+                margin_top = $('.nav_fixed').outerHeight(true);
+            // console.log(margin_top);
             var fixed = $('.nav_fixed'),
                 scroll = $(window).scrollTop();
 
             if ((!fixed.hasClass('fixed')) && (scroll >= scroll_top_height)) {
-                // console.log(margin_top);
+                console.log(margin_top);
                 fixed.addClass('fixed');
                 // добавление margin блоку
                 margin_div.css('margin-top', margin_top);
@@ -391,7 +396,7 @@
                 $("html, body").animate({
                     scrollTop: $($(this).attr("href")).offset().top + "px"
                 }, {
-                        duration: 800,
+                        duration: 900,
                         // easing: "swing"
                     });
                 return false;
@@ -400,11 +405,12 @@
         // scrollTo
         $(document).ready(function () {
             $("a.scrollto").click(function () {
+                var margin_top = $('.nav_fixed').outerHeight();
                 var elementClick = $(this).attr("href")
-                var destination = $(elementClick).offset().top;
+                var destination = $(elementClick).offset().top - margin_top;
                 jQuery("html:not(:animated),body:not(:animated)").animate({
                     scrollTop: destination
-                }, 800);
+                }, 900);
                 return false;
             });
         });
