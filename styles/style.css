@@ -2,36 +2,31 @@
 
 @font-face {
     font-family: 'helix';
-    src: url('../fonts/MyriadPro-Light.woff') format('woff');
-    src: url('../fonts/MyriadPro-Light.woff2') format('woff2');
+    src: url('../fonts/MyriadPro-Light.woff2') format('woff2'), url('../fonts/MyriadPro-Light.woff') format('woff');
     font-weight: 300;
 }
 
 @font-face {
     font-family: 'helix';
-    src: url('../fonts/MyriadPro-Regular.woff') format('woff');
-    src: url('../fonts/MyriadPro-Regular.woff2') format('woff2');
+    src: url('../fonts/MyriadPro-Regular.woff2') format('woff2'), url('../fonts/MyriadPro-Regular.woff') format('woff');
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'helix';
-    src: url('../fonts/MyriadPro-Cond.woff') format('woff');
-    src: url('../fonts/MyriadPro-Cond.woff2') format('woff2');
+    src: url('../fonts/MyriadPro-Cond.woff2') format('woff2'), url('../fonts/MyriadPro-Cond.woff') format('woff');
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'helix';
-    src: url('../fonts/MyriadPro-BoldCond.woff') format('woff');
-    src: url('../fonts/MyriadPro-BoldCond.woff2') format('woff2');
+    src: url('../fonts/MyriadPro-BoldCond.woff2') format('woff2'), url('../fonts/MyriadPro-BoldCond.woff') format('woff');
     font-weight: 600;
 }
 
 @font-face {
     font-family: 'helix';
-    src: url('../fonts/MyriadPro-Bold.woff') format('woff');
-    src: url('../fonts/MyriadPro-Bold.woff2') format('woff2');
+    src: url('../fonts/MyriadPro-Bold.woff2') format('woff2'), url('../fonts/MyriadPro-Bold.woff') format('woff');
     font-weight: 700;
 }
 
@@ -405,12 +400,14 @@ td {
 .spec p {
     margin-bottom: 25px;
     padding: 0 20px;
+    max-width: 100%;
 }
 
 .spec_name {
     font-size: 18px;
     font-weight: 600;
     margin-top: 30px;
+    max-width: 100%;
 }
 
 .spec_btn, .spec_form1_btn, .spec_form2_btn {
@@ -566,6 +563,12 @@ td {
     font-weight: 600;
     font-size: 22px;
     margin-left: 15px;
+}
+
+.preim_left_item p, .preim_right_item p {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
 }
 
 /* Feedback */
@@ -779,6 +782,10 @@ td {
     justify-content: flex-end;
 }
 
+.promo_2_form {
+    width: 70%;
+}
+
 .promo_2_text {
     color: #000;
     font-weight: 600;
@@ -789,6 +796,7 @@ td {
 
 .promo_2_form input, .promo_2_form textarea {
     background-color: rgba(255, 255, 255, 0.6);
+    width: 100%;
 }
 
 .promo_2_form input {
