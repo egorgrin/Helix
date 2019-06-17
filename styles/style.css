@@ -280,6 +280,7 @@ td {
     -ms-flex-align: center;
     align-items: center;
     padding: 80px 0;
+    /* height: 100vh; */
 }
 
 .promo_text {
@@ -1086,6 +1087,64 @@ td {
 }
 
 .form_zapis_btn:hover {
+    -webkit-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    background-color: #111111;
+    color: #fff;
+    border-color: #43b659;
+}
+
+.feedback_form {
+    text-align: center;
+}
+
+.feedback_form input, .feedback_form textarea {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.feedback_form input, .feedback_form textarea {
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    border: 1px solid #000;
+    /* background-color: #4d4d4d; */
+    border-radius: 3px;
+    padding: 12px;
+    margin-bottom: 20px;
+    color: #000;
+    outline: 0;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.feedback_form input:focus, .feedback_form textarea:focus {
+    border: 1px solid #43b659;
+}
+
+.form_zapis_btn {
+    -webkit-transition-timing-function: cubic-bezier(.47, 0, 1, .05);
+    -o-transition-timing-function: cubic-bezier(.47, 0, 1, .05);
+    transition-timing-function: cubic-bezier(.47, 0, 1, .05);
+    -webkit-transition-property: background-color, color, border-color;
+    -o-transition-property: background-color, color, border-color;
+    transition-property: background-color, color, border-color;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border: 2px solid transparent;
+    color: #ffffff;
+    background-color: #43b659;
+    padding: 14px 35px;
+    font-weight: 400;
+    font-size: 20px;
+    /* margin-top: 10px; */
+    border-radius: 10px;
+    width: 40%;
+    border: none;
+}
+
+.feedback_form_btn:hover {
     -webkit-transition-duration: 0.2s;
     -o-transition-duration: 0.2s;
     transition-duration: 0.2s;

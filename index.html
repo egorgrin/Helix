@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="styles/jquery.mmenu.all.css">
     <link rel="stylesheet" href="styles/hamburgers.css">
+    <link rel="stylesheet" href="styles/magnific-popup.css">
+
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -86,7 +88,7 @@
             </div>
         </div>
     </div>
-    <div class="promo fixed_margin">
+    <div class="promo">
         <div class="container-fluid">
             <div class="row">
                 <div class="promo_content offset-sm-1 col-12 col-sm-8">
@@ -293,8 +295,8 @@
             </div>
             <div class="sl-nav"></div>
             <div class="bf_btns col-12">
-                <a href="#" class="fb_btn_1 btn">Выбор врача и запись онлайн</a><a href="#"
-                    class="fb_btn_2 btn">Оставить отзыв</a>
+                <a href="#" class="fb_btn_1 btn">Выбор врача и запись онлайн</a><a href="#test-form"
+                    class="popup-with-form fb_btn_2 btn">Оставить отзыв</a>
             </div>
         </div>
     </div>
@@ -333,9 +335,51 @@
             </div>
         </div>
     </div>
+    <!-- dfhdfhfdh -->
+    <div id="test-form" class="feedback_form mfp-hide white-popup-block">
+        <div class="row">
+            <div class="col-12 offset-md-4 col-md-4">
+                <form action="" method="" class="form_new">
+                    <input type="text" name="date" placeholder="Ваши имя и фамилия">
+                    <textarea name="question" placeholder="Расскажите о ваших впечатлениях!"></textarea>
+                    <input type="hidden" name="page" value="[[*pagetitle]]">
+                    <button class="form_zapis_btn">Оставить отзыв</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Leave Feedback -->
+    <!-- <form id="test-form" class="mfp-hide white-popup-block">
+        <h1>Form</h1>
+        <fieldset style="border:0;">
+            <p>Lightbox has an option to automatically focus on the first input. It's strongly recommended to use
+                <code>inline</code> popup type for lightboxes with form instead of <code>ajax</code> (to keep entered
+                data if the user accidentally refreshed the page).</p>
+            <ol>
+                <li>
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Name" required="">
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="example@domain.com" required="">
+                </li>
+                <li>
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="tel" placeholder="Eg. +447500000000" required="">
+                </li>
+                <li>
+                    <label for="textarea">Textarea</label><br>
+                    <textarea id="textarea">Try to resize me to see how popup CSS-based resizing works.</textarea>
+                </li>
+            </ol>
+        </fieldset>
+    </form> -->
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/jquery.mmenu.all.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript">
         // mmenu
         $(document).ready(
@@ -371,9 +415,9 @@
             // определяем блок к которому прибавляется margin
             var margin_div = $('.fixed_margin');
             // вычисление высоты фиксированного блока
-            var margin_top = 0;
-            if ($('.nav_fixed').css("display") != "none")
-                margin_top = $('.nav_fixed').outerHeight(true);
+            // var margin_top = 0;
+            // if ($('.nav_fixed').css("display") != "none")
+            //     margin_top = $('.nav_fixed').outerHeight();
             // console.log(margin_top);
             var fixed = $('.nav_fixed'),
                 scroll = $(window).scrollTop();
@@ -405,10 +449,10 @@
         // scrollTo
         $(document).ready(function () {
             $("a.scrollto").click(function () {
-                var margin_top = $('.nav_fixed').outerHeight();
-                console.log(margin_top);
+                var top_margin = $('.nav_fixed').outerHeight();
+                // console.log(top_margin);
                 var elementClick = $(this).attr("href")
-                var destination = $(elementClick).offset().top - margin_top + 2;
+                var destination = $(elementClick).offset().top - top_margin + 2;
                 jQuery("html:not(:animated),body:not(:animated)").animate({
                     scrollTop: destination
                 }, 900);
@@ -416,6 +460,15 @@
             });
         });
         // Slick
+        $(document).ready(function () {
+            $('.slider_promo').slick({
+                dots: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: false,
+            });
+        });
         $(document).ready(function () {
             $('.slider').slick({
                 dots: true,
@@ -425,6 +478,34 @@
                 adaptiveHeight: false,
                 appendDots: '.sl-nav'
             });
+        });
+        // feedback popup
+        $(document).ready(function () {
+            $('.popup-with-form').magnificPopup({
+                type: 'inline',
+                preloader: false,
+                focus: '#name',
+
+                // When elemened is focused, some mobile browsers in some cases zoom in
+                // It looks not nice, so we disable it:
+                callbacks: {
+                    beforeOpen: function () {
+                        if ($(window).width() < 700) {
+                            this.st.focus = false;
+                        } else {
+                            this.st.focus = '#name';
+                        }
+                    }
+                }
+            });
+        });
+        $('.popup-with-form').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Загрузка изображения #%curr%...',
+            gallery: {
+                enabled: true,
+            }
         });
     </script>
 
