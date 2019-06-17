@@ -74,6 +74,10 @@ input, button {
     font-family: inherit;
 }
 
+td {
+    vertical-align: middle;
+}
+
 .title {
     text-align: center;
     margin-bottom: 80px;
@@ -233,8 +237,14 @@ input, button {
 }
 
 .fixed .fixed_phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -890,6 +900,7 @@ input, button {
 /* DC PAGE */
 
 .site_content {
+    -webkit-box-shadow: 0 0 20px #d1d1d1;
     box-shadow: 0 0 20px #d1d1d1;
     border: 1px solid #e8e8e8;
     border-top: none;
@@ -907,7 +918,11 @@ input, button {
 }
 
 .page_title {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 30px 0;
     font-size: 20px;
@@ -967,13 +982,23 @@ input, button {
 }
 
 .info_block_flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .info_block_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -1076,7 +1101,8 @@ h3:first-of-type {
 }
 
 .doc {
-    padding: 60px 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .doc_left {
@@ -1117,6 +1143,62 @@ h3:first-of-type {
     font-size: 17px;
     font-weight: 300;
     line-height: 1.2;
+}
+
+/* PRICE PAGE */
+
+.thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.price {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+.price thead {
+    background: #33ae2c;
+}
+
+.price thead td {
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    width: 25%;
+}
+
+.price thead td:first-child {
+    width: 33.333%;
+}
+
+.price tr td:not(:first-child) {
+    font-weight: bold;
+}
+
+.price tr td {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.price tr:nth-child(even) {
+    background: #f6f6f6;
+}
+
+.content h2.price_h2 {
+    font-size: 24px;
+}
+
+.content h2.price_h2:before {
+    top: 3px;
+    height: 22px;
+}
+
+.price_h2 {
+    margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -1182,6 +1264,8 @@ h3:first-of-type {
     /* DC PAGE */
     .hr p {
         left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
         transform: translateX(-50%);
     }
     .form_zapis_btn {
@@ -1257,6 +1341,8 @@ h3:first-of-type {
     }
     /*  */
     .dc_left {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
         order: 1;
         margin-top: 40px;
     }
@@ -1369,3 +1455,11 @@ h3:first-of-type {
     .form_zapis_btn {
         font-size: 16px;
     }
+    /* PRICE PAGE */
+    .price thead {
+        font-size: 14px;
+    }
+    .price tr td {
+        padding: 17px 3px;
+    }
+}

@@ -141,8 +141,8 @@
                             <p>Стоимость <strong>9999 рублей</strong> приема</p>
                             <p>Где и что принимает</p>
                         </div>
-                        <a href="#" class="spec_form1_btn btn">ДЦ на Дерибасовской</a>
-                        <a href="#" class="spec_form2_btn btn">ДЦ на Брайтон-Бич</a>
+                        <a href="dc_oren.html" class=" spec_form1_btn btn">ДЦ Оренбургский</a>
+                        <a href="dc_prom.html" class="spec_form2_btn btn">ДЦ на Промысловой</a>
                     </div>
                 </div>
                 <div class="spec_marg col-12 col-md-6 col-xl-3">
@@ -155,8 +155,8 @@
                             <p>Стоимость <strong>9999 рублей</strong> приема</p>
                             <p>Где и что принимает</p>
                         </div>
-                        <a href="#" class="spec_form1_btn btn">ДЦ на Дерибасовской</a>
-                        <a href="#" class="spec_form2_btn btn">ДЦ на Брайтон-Бич</a>
+                        <a href="dc_oren.html" class=" spec_form1_btn btn">ДЦ Оренбургский</a>
+                        <a href="dc_prom.html" class="spec_form2_btn btn">ДЦ на Промысловой</a>
                     </div>
                 </div>
                 <div class="spec_marg col-12 col-md-6 col-xl-3">
@@ -169,8 +169,8 @@
                             <p>Стоимость <strong>9999 рублей</strong> приема</p>
                             <p>Где и что принимает</p>
                         </div>
-                        <a href="#" class="spec_form1_btn btn">ДЦ на Дерибасовской</a>
-                        <a href="#" class="spec_form2_btn btn">ДЦ на Брайтон-Бич</a>
+                        <a href="dc_oren.html" class=" spec_form1_btn btn">ДЦ Оренбургский</a>
+                        <a href="dc_prom.html" class="spec_form2_btn btn">ДЦ на Промысловой</a>
                     </div>
                 </div>
                 <div class="spec_marg col-12 col-md-6 col-xl-3">
@@ -183,8 +183,8 @@
                             <p>Стоимость <strong>9999 рублей</strong> приема</p>
                             <p>Где и что принимает</p>
                         </div>
-                        <a href="#" class="spec_form1_btn btn">ДЦ на Дерибасовской</a>
-                        <a href="#" class="spec_form2_btn btn">ДЦ на Брайтон-Бич</a>
+                        <a href="dc_oren.html" class=" spec_form1_btn btn">ДЦ Оренбургский</a>
+                        <a href="dc_prom.html" class="spec_form2_btn btn">ДЦ на Промысловой</a>
                     </div>
                 </div>
             </div>
@@ -379,7 +379,7 @@
                 scroll = $(window).scrollTop();
 
             if ((!fixed.hasClass('fixed')) && (scroll >= scroll_top_height)) {
-                console.log(margin_top);
+                // console.log(margin_top);
                 fixed.addClass('fixed');
                 // добавление margin блоку
                 margin_div.css('margin-top', margin_top);
@@ -406,8 +406,9 @@
         $(document).ready(function () {
             $("a.scrollto").click(function () {
                 var margin_top = $('.nav_fixed').outerHeight();
+                console.log(margin_top);
                 var elementClick = $(this).attr("href")
-                var destination = $(elementClick).offset().top - margin_top;
+                var destination = $(elementClick).offset().top - margin_top + 2;
                 jQuery("html:not(:animated),body:not(:animated)").animate({
                     scrollTop: destination
                 }, 900);
