@@ -103,6 +103,14 @@ td {
     margin-right: 0;
 }
 
+.slick-arrow {
+    z-index: 99;
+}
+
+.slider_promo .slick-arrow.slick-prev:before, .slider_promo .slick-arrow.slick-next:before, .fbs .slick-arrow.slick-prev:before, .fbs .slick-arrow.slick-next:before {
+    cursor: pointer;
+}
+
 /* Header */
 
 .header {
@@ -280,7 +288,7 @@ td {
     -ms-flex-align: center;
     align-items: center;
     padding: 80px 0;
-    /* height: 100vh; */
+    height: 100vh;
 }
 
 .promo_text {
@@ -316,6 +324,10 @@ td {
     background-color: rgba(255, 255, 255, 0.3);
     color: #43b659;
     border-color: #43b659;
+}
+
+.slick-initialized .slick-slide {
+    display: flex;
 }
 
 .slider_promo .slick-arrow {
