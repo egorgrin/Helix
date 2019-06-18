@@ -326,7 +326,7 @@ td {
     border-color: #43b659;
 }
 
-.slick-initialized .slick-slide {
+.promo.slick-slide {
     display: flex;
 }
 
