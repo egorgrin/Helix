@@ -88,13 +88,37 @@
             </div>
         </div>
     </div>
-    <div class="promo">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="promo_content offset-sm-1 col-12 col-sm-8">
-                    <div class="promo_text">ПОЛУЧИТЕ <span>КОНСУЛЬТАЦИЮ</span><br>
-                        У ПРОФЕССИОНАЛОВ</div>
-                    <a class="promo_button btn">НАШИ СПЕЦИАЛИСТЫ</a>
+    <div class="slider_promo">
+        <div class="promo slide_1">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="promo_content offset-sm-1 col-12 col-sm-8">
+                        <div class="promo_text">ПОЛУЧИТЕ <span>КОНСУЛЬТАЦИЮ</span><br>
+                            У ПРОФЕССИОНАЛОВ</div>
+                        <a class="promo_button btn">НАШИ СПЕЦИАЛИСТЫ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="promo slide_2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="promo_content offset-sm-1 col-12 col-sm-8">
+                        <div class="promo_text">ПОЛУЧИТЕ <span>КОНСУЛЬТАЦИЮ</span><br>
+                            У ПРОФЕССИОНАЛОВ</div>
+                        <a class="promo_button btn">НАШИ СПЕЦИАЛИСТЫ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="promo slide_3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="promo_content offset-sm-1 col-12 col-sm-8">
+                        <div class="promo_text">ПОЛУЧИТЕ <span>КОНСУЛЬТАЦИЮ</span><br>
+                            У ПРОФЕССИОНАЛОВ</div>
+                        <a class="promo_button btn">НАШИ СПЕЦИАЛИСТЫ</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -415,9 +439,9 @@
             // определяем блок к которому прибавляется margin
             var margin_div = $('.fixed_margin');
             // вычисление высоты фиксированного блока
-            // var margin_top = 0;
-            // if ($('.nav_fixed').css("display") != "none")
-            //     margin_top = $('.nav_fixed').outerHeight();
+            var margin_top = 0;
+            if ($('.nav_fixed').css("display") != "none")
+                margin_top = $('.nav_fixed').outerHeight();
             // console.log(margin_top);
             var fixed = $('.nav_fixed'),
                 scroll = $(window).scrollTop();
@@ -459,7 +483,7 @@
                 return false;
             });
         });
-        // Slick
+        // Slick feed
         $(document).ready(function () {
             $('.slider_promo').slick({
                 dots: false,
