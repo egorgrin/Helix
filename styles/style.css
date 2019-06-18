@@ -1476,6 +1476,9 @@ h3:first-of-type {
         padding: 40px 0;
         text-align: center;
     }
+    .slider_promo .slick-arrow.slick-prev:before, .slider_promo .slick-arrow.slick-next:before {
+        display: none;
+    }
     .promo_text {
         font-size: 38px;
     }
