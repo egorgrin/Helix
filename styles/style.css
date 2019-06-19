@@ -104,7 +104,7 @@ td {
 }
 
 .slick-arrow {
-    z-index: 99;
+    z-index: 1;
 }
 
 .slider_promo .slick-arrow.slick-prev:before, .slider_promo .slick-arrow.slick-next:before, .fbs .slick-arrow.slick-prev:before, .fbs .slick-arrow.slick-next:before {
@@ -354,7 +354,6 @@ td {
     width: 22px;
     height: 41px;
     background: url(../img/icons/sl-arrow.png) no-repeat center center;
-    z-index: 99;
 }
 
 .slider_promo .slick-arrow.slick-prev:before {
@@ -594,6 +593,7 @@ td {
 .preim_left_item img, .preim_right_item img {
     width: 50px;
     height: 50px;
+    flex: 0 0 50px;
 }
 
 .preim_row {
@@ -1340,9 +1340,6 @@ h3:first-of-type {
     .logo img {
         height: 60px;
     }
-    .nav_fixed {
-        display: none;
-    }
     .promo_text {
         font-size: 65px;
     }
@@ -1416,6 +1413,9 @@ h3:first-of-type {
         display: block;
     }
     .vertical {
+        display: none;
+    }
+    .nav_fixed {
         display: none;
     }
     .header_top_right {
