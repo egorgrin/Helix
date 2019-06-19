@@ -113,7 +113,7 @@ td {
 
 /* Header */
 
-.header {
+.header_fixed {
     background-color: #43b659;
 }
 
@@ -230,6 +230,10 @@ td {
     justify-content: center;
 }
 
+.nav_fixed {
+    background-color: #43b659;
+}
+
 .nav_fixed.fixed {
     display: block;
 }
@@ -256,7 +260,7 @@ td {
 }
 
 .header_bot_row a {
-    font-size: 20px;
+    font-size: 19px;
     color: #ffffff;
     font-weight: 600;
     margin: 0 10px;
@@ -553,7 +557,7 @@ td {
     padding: 20px 44px;
     font-weight: 600;
     font-family: Arial;
-    font-size: 14px;
+    font-size: 13px;
     margin-top: 40px;
     border-radius: 30px;
 }
@@ -1368,7 +1372,7 @@ h3:first-of-type {
         margin-bottom: 80px;
     }
     .footer {
-        font-size: 15px;
+        font-size: 14px;
     }
     /* DC PAGE */
     .hr p {

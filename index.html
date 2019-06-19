@@ -18,50 +18,52 @@
 
 <body>
     <div class="header">
-        <div class="container-fluid">
-            <div id="top" class="header_top_row row">
-                <div class="logo col-sm-12 col-md-4">
-                    <a href="#"><img src="img/logo.png" alt="Хеликс"></a>
-                </div>
-                <div class="header_top_flex col-sm-12 col-md-8">
-                    <div class="header_top_text header_top_left">
-                        <strong>ДЦ "На промысловом"</strong><br>
-                        пн-пт 07:30 - 19:30<br>
-                        сб 08:00 - 14:00<br>
-                        вс - выходной<br>
-                        пр. Промысловый д.1<br>
-                        <a href="">+7 (3532) 43-05-19</a><br>
-                        <a href="#">helix.tyumen@gmail.com</a>
-                    </div>
-                    <div class="vertical"></div>
-                    <div class="header_top_text header_top_mid">
-                        <strong>ДЦ "Оренбургский"</strong><br>
-                        пн-пт 07:30 - 19:30<br>
-                        сб 7:30 - 14:00<br>
-                        вс - выходной<br>
-                        ул. Пролетарская 288/2<br>
-                        <a href="">+7 (3532) 43-44-13</a><br>
-                        <a href="#">helix.tyumen@gmail.com</a>
-                    </div>
-                    <div class="vertical"></div>
-                    <div class="header_top_right">
-                        <a href="tel:89322010205" class="header_top_phone">Телефон: 43-05-19</a>
-                        <a href="https://helix.ru" class="header_top_button btn">Сдать анализы</a>
-                    </div>
-                    <div class="logo_2 hidden">
+        <div class="header_fixed Fixed">
+            <div class="container-fluid">
+                <div id="top" class="header_top_row row">
+                    <div class="logo col-sm-12 col-md-4">
                         <a href="#"><img src="img/logo.png" alt="Хеликс"></a>
                     </div>
-                    <div class="hamburger_block">
-                        <button class="hamburger hamburger--spin-r" type="button">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
-                        </button>
+                    <div class="header_top_flex col-sm-12 col-md-8">
+                        <div class="header_top_text header_top_left">
+                            <strong>ДЦ "На промысловом"</strong><br>
+                            пн-пт 07:30 - 19:30<br>
+                            сб 08:00 - 14:00<br>
+                            вс - выходной<br>
+                            пр. Промысловый д.1<br>
+                            <a href="">+7 (3532) 43-05-19</a><br>
+                            <a href="#">helix.tyumen@gmail.com</a>
+                        </div>
+                        <div class="vertical"></div>
+                        <div class="header_top_text header_top_mid">
+                            <strong>ДЦ "Оренбургский"</strong><br>
+                            пн-пт 07:30 - 19:30<br>
+                            сб 7:30 - 14:00<br>
+                            вс - выходной<br>
+                            ул. Пролетарская 288/2<br>
+                            <a href="">+7 (3532) 43-44-13</a><br>
+                            <a href="#">helix.tyumen@gmail.com</a>
+                        </div>
+                        <div class="vertical"></div>
+                        <div class="header_top_right">
+                            <a href="tel:89322010205" class="header_top_phone">Телефон: 43-05-19</a>
+                            <a href="https://helix.ru" class="header_top_button btn">Сдать анализы</a>
+                        </div>
+                        <div class="logo_2 hidden">
+                            <a href="#"><img src="img/logo.png" alt="Хеликс"></a>
+                        </div>
+                        <div class="hamburger_block">
+                            <button class="hamburger hamburger--spin-r" type="button">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="nav nav_fixed">
+        <div class="nav nav_fixed Fixed">
             <div class="container-fluid">
                 <div class="header_bot_row my-menu">
                     <div class="row">
@@ -415,7 +417,13 @@
                     ],
                     "navbar":
                         { title: "Меню" }
-                });
+                }, {
+                        fixedElements: {
+                            elemInsertMethod: 'prependTo'
+                        }
+                    }
+                );
+
                 var api = $menu.data("mmenu");
 
                 $('.hamburger').click(function (e) {
@@ -531,7 +539,7 @@
                 enabled: true,
             }
         });
-        
+
     </script>
 
 </body>
